@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>电子行驶证查询</title>
+    <style>
+        #app2 h2 {
+            text-align: center;
+            margin-top: 50px;
+            color: #000;
+            margin-bottom: 0;
+        }
+
+        #app2 .subTitle {
+            text-align: center;
+            font-size: 12px;
+            color: #207CE6;
+        }
+
+        #app2 .info {
+            margin-top: 50px;
+        }
+
+        #app2 .info>div {
+            line-height: 50px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #app2 .info>div:nth-of-type(1),
+        #app2 .info>div:nth-of-type(2) {
+            border-bottom: 1px solid #e6e6e6;
+        }
+
+        #app2 .info>div span:nth-of-type(1) {
+            color: #666;
+            margin: 0 20px;
+        }
+
+        #app2 input {
+            flex: 1;
+            border: none;
+            outline: none;
+            color: #000;
+        }
+
+        .btn {
+            display: block;
+            width: 94%;
+            background-color: #207CE6;
+            color: #fff;
+            padding: 0 20px;
+            box-sizing: border-box;
+            text-decoration: none;
+            text-align: center;
+            line-height: 50px;
+            border-radius: 5px;
+            position: fixed;
+            bottom: 50px;
+            left: 3%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app2">
+        <h2>录入信息</h2>
+        <p class="subTitle">请务必保证信息真实有效</p>
+        <div class="info">
+            <div><span>证件类型</span><span style="flex: 1;">居民身份证</span><span>></span></div>
+            <div><span>身份证号</span><input type="text" placeholder="请输入身份证号" id="id"><span></span></div>
+            <div><span>手机号码</span><input type="text" placeholder="请输入手机号码" id="num"><span></span></div>
+        </div>
+        <a href="#" class="btn">下一步</a>
+        
+    </div>
+    <script>
+        let id = document.getElementById('id')
+        let num = document.getElementById('num')
+        document.querySelector('.btn').addEventListener('click', function () {
+            if (id.value === '341322200503316411' || num.value === '18098738991') {
+                location.href = 'index3.html'
+            } 
+        })
+    </script>
+</body>
+
+</html>
